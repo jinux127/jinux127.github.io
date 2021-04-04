@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "기록"
+    url: /memories/
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
