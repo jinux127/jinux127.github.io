@@ -1,7 +1,7 @@
 ---
 title:"gitblog.io 첫 블로그"
 excerpt: "GitHub blog 서비스 이용해서 기록해보자"
-
+permalink :/memories/
 categories:
 	- Blog
 tags:
