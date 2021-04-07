@@ -6,5 +6,6 @@ layout: single
 
 GitHub 블로그
 
-이 블로그는 Github Pages 블로그 서비스인 github.io를 같이 만들어보는 블로그이다.
+이 블로그는 Github Pages 블로그 서비스인 github.io를 같이 만들어보는 블로그입니다.
 
+꾸미는 중~!
