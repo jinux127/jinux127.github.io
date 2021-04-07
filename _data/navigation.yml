@@ -2,10 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "시"
-    url: /categories/시/
+#  - title: "시"
+#    url: /categories/시/
   - title: "Categories"
     url: /categories/
-  - title: "Tags"
-    url: /tags/
-  
+

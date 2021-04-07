@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://jinux127.github.io/sitemap.xml
