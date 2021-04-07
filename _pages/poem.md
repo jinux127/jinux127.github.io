@@ -1,7 +1,7 @@
 ---
 title: "시"
 permalink: /categories/시/
-layout: category
+layout: categories
 author_profile: true
 taxonomy: 시
 ---
