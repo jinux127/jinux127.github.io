@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "JJinux's BLOG"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "jinwoo"
+name                     : "JINWOO"
 description              : "memories"
 url                      : "https://jinux127.github.io"
 baseurl      	        : ""
@@ -94,9 +94,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "jinwoo"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "good"
+  name             : "JINWOO"
+  avatar           : "/assets/images/mind.jpeg"
+  bio              : "화이팅"
   location         : "대한민국"
   email            :
   links:
