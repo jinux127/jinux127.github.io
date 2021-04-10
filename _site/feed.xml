@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jinux127.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jinux127.github.io/" rel="alternate" type="text/html" /><updated>2021-04-07T14:26:47+00:00</updated><id>https://jinux127.github.io/feed.xml</id><title type="html">JJinux’s BLOG</title><subtitle>memories</subtitle><author><name>JINWOO</name></author><entry><title type="html">낮은 곳으로 - 이정하</title><link href="https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/" rel="alternate" type="text/html" title="낮은 곳으로 - 이정하" /><published>2021-04-07T00:00:00+00:00</published><updated>2021-04-07T13:06:00+00:00</updated><id>https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1</id><content type="html" xml:base="https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/">&lt;p&gt;낮은 곳으로&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jinux127.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jinux127.github.io/" rel="alternate" type="text/html" /><updated>2021-04-10T06:02:31+00:00</updated><id>https://jinux127.github.io/feed.xml</id><title type="html">JJinux’s BLOG</title><subtitle>memories</subtitle><author><name>JINWOO</name></author><entry><title type="html">자바스크립트 기초 문법</title><link href="https://jinux127.github.io/javascript/JavaScript-Basic1/" rel="alternate" type="text/html" title="자바스크립트 기초 문법" /><published>2021-04-07T00:00:00+00:00</published><updated>2021-04-11T05:00:00+00:00</updated><id>https://jinux127.github.io/javascript/JavaScript-Basic1</id><content type="html" xml:base="https://jinux127.github.io/javascript/JavaScript-Basic1/">&lt;h1 id=&quot;변수-var-letconst&quot;&gt;변수 var, let,const&lt;/h1&gt;
+
+&lt;p&gt;JavaScript는 변수를 선언할 때, 자료형을 입력하지 않는다. var, let const 세가지 방식이 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h1 id=&quot;var&quot;&gt;var&lt;/h1&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;variable의 줄임말.&lt;/li&gt;
+    &lt;li&gt;var의 선언은 함수가 시작될 때 처리된다. 선언 위치가 어디든 상관없이 함수의 시작과 동시에 처리되기 때문에 선언보다 윗줄에서 변수가 참조되더라도 사용가능하다.&lt;/li&gt;
+    &lt;li&gt;단, 선언만 하고 할당은 하지않는다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h1 id=&quot;let&quot;&gt;let&lt;/h1&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;var과 다르게 block 단위로 변수가 선언된다. 즉, 변수가 선언된 block에서만 사용 가능하다. 또한, 할당된 값 역시 바꿔줄 수 있다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h1 id=&quot;const&quot;&gt;const&lt;/h1&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;const로 변수 선언을 하면 let과 같이 block 단위로 변수가 선언되지만, let과 다른 점은 const는 변화하지 않는 변수. 상수이다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;</content><author><name>JINWOO</name></author><category term="JavaScript" /><category term="JavaScript" /><summary type="html">JavaScript</summary></entry><entry><title type="html">낮은 곳으로 - 이정하</title><link href="https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/" rel="alternate" type="text/html" title="낮은 곳으로 - 이정하" /><published>2021-04-07T00:00:00+00:00</published><updated>2021-04-07T13:06:00+00:00</updated><id>https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1</id><content type="html" xml:base="https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/">&lt;p&gt;낮은 곳으로&lt;/p&gt;
 
 &lt;p&gt;낮은 곳에 있고 싶었다
 낮은 곳이라면 지상의

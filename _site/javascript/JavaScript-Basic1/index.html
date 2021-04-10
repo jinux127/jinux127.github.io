@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>낮은 곳으로 - 이정하 - JJinux’s BLOG</title>
-<meta name="description" content="이정하 시인의 작품">
+<!-- begin _includes/seo.html --><title>자바스크립트 기초 문법 - JJinux’s BLOG</title>
+<meta name="description" content="JavaScript">
 
 
   <meta name="author" content="JINWOO">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="JJinux's BLOG">
-<meta property="og:title" content="낮은 곳으로 - 이정하">
-<meta property="og:url" content="https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/">
+<meta property="og:title" content="자바스크립트 기초 문법">
+<meta property="og:url" content="https://jinux127.github.io/javascript/JavaScript-Basic1/">
 
 
-  <meta property="og:description" content="이정하 시인의 작품">
+  <meta property="og:description" content="JavaScript">
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-04-07T13:06:00+00:00">
+  <meta property="article:modified_time" content="2021-04-11T05:00:00+00:00">
 
 
 
@@ -47,7 +47,7 @@
   
 
 
-<link rel="canonical" href="https://jinux127.github.io/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/">
+<link rel="canonical" href="https://jinux127.github.io/javascript/JavaScript-Basic1/">
 
 
 
@@ -275,15 +275,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="낮은 곳으로 - 이정하">
-    <meta itemprop="description" content="이정하 시인의 작품">
+    <meta itemprop="headline" content="자바스크립트 기초 문법">
+    <meta itemprop="description" content="JavaScript">
     <meta itemprop="datePublished" content="2021-04-07T00:00:00+00:00">
-    <meta itemprop="dateModified" content="2021-04-07T13:06:00+00:00">
+    <meta itemprop="dateModified" content="2021-04-11T05:00:00+00:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">낮은 곳으로 - 이정하
+          <h1 id="page-title" class="page__title" itemprop="headline">자바스크립트 기초 문법
 </h1>
           
 
@@ -311,25 +311,35 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>낮은 곳으로</p>
+        <h1 id="변수-var-letconst">변수 var, let,const</h1>
 
-<p>낮은 곳에 있고 싶었다
-낮은 곳이라면 지상의
-그 어디라도 좋다</p>
+<p>JavaScript는 변수를 선언할 때, 자료형을 입력하지 않는다. var, let const 세가지 방식이 있다.</p>
 
-<p>찰랑찰랑 물처럼 고여들 네 사랑을
-온 몸으로 받아들일 수만 있다면
-한 방울도 헛되이
-새어 나가지 않게 할 수만 있다면</p>
+<blockquote>
+  <h1 id="var">var</h1>
 
-<p>그래, 내가
-낮은 곳에 있겠다는 건
-너를 위해 나를 온전히 비우겠다는 뜻이다</p>
+  <ul>
+    <li>variable의 줄임말.</li>
+    <li>var의 선언은 함수가 시작될 때 처리된다. 선언 위치가 어디든 상관없이 함수의 시작과 동시에 처리되기 때문에 선언보다 윗줄에서 변수가 참조되더라도 사용가능하다.</li>
+    <li>단, 선언만 하고 할당은 하지않는다.</li>
+  </ul>
+</blockquote>
 
-<p>나의 존재마저 너에게
-흠뻑 주고 싶다는 뜻이다</p>
+<blockquote>
+  <h1 id="let">let</h1>
 
-<p>잠겨 죽어도 좋으니 너는 물처럼 내게 밀려오라</p>
+  <ul>
+    <li>var과 다르게 block 단위로 변수가 선언된다. 즉, 변수가 선언된 block에서만 사용 가능하다. 또한, 할당된 값 역시 바꿔줄 수 있다.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <h1 id="const">const</h1>
+
+  <ul>
+    <li>const로 변수 선언을 하면 let과 같이 block 단위로 변수가 선언되지만, let과 다른 점은 const는 변화하지 않는 변수. 상수이다.</li>
+  </ul>
+</blockquote>
 
         
       </section>
@@ -346,9 +356,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#%EC%8B%9C" class="page__taxonomy-item" rel="tag">시</a><span class="sep">, </span>
-    
-      <a href="/tags/#%EC%9D%B4%EC%A0%95%ED%95%98" class="page__taxonomy-item" rel="tag">이정하</a>
+      <a href="/tags/#javascript" class="page__taxonomy-item" rel="tag">JavaScript</a>
     
     </span>
   </p>
@@ -365,14 +373,14 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#%EC%9D%B4%EC%A0%95%ED%95%98" class="page__taxonomy-item" rel="tag">이정하</a>
+      <a href="/categories/#javascript" class="page__taxonomy-item" rel="tag">JavaScript</a>
     
     </span>
   </p>
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-07">April 7, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-10">April 10, 2021</time></p>
 
 
       </footer>
@@ -382,22 +390,23 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%EB%82%AE%EC%9D%80+%EA%B3%B3%EC%9C%BC%EB%A1%9C+-+%EC%9D%B4%EC%A0%95%ED%95%98%20https%3A%2F%2Fjinux127.github.io%2F%25EC%259D%25B4%25EC%25A0%2595%25ED%2595%2598%2Fpoem1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8+%EA%B8%B0%EC%B4%88+%EB%AC%B8%EB%B2%95%20https%3A%2F%2Fjinux127.github.io%2Fjavascript%2FJavaScript-Basic1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjinux127.github.io%2F%25EC%259D%25B4%25EC%25A0%2595%25ED%2595%2598%2Fpoem1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjinux127.github.io%2Fjavascript%2FJavaScript-Basic1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjinux127.github.io%2F%25EC%259D%25B4%25EC%25A0%2595%25ED%2595%2598%2Fpoem1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjinux127.github.io%2Fjavascript%2FJavaScript-Basic1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/javascript/JavaScript-Basic1/" class="pagination--pager" title="자바스크립트 기초 문법
+      <a href="/first-post/" class="pagination--pager" title="github.io 첫 블로그
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/" class="pagination--pager" title="낮은 곳으로 - 이정하
+">Next</a>
     
   </nav>
 
@@ -421,7 +430,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/javascript/JavaScript-Basic1/" rel="permalink">자바스크립트 기초 문법
+        <a href="/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/" rel="permalink">낮은 곳으로 - 이정하
 </a>
       
     </h2>
@@ -446,7 +455,7 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">JavaScript
+    <p class="archive__item-excerpt" itemprop="description">이정하 시인의 작품
 </p>
   </article>
 </div>
