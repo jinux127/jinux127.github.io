@@ -1,11 +1,9 @@
 ---
-title: "블로그 설명서"
+title: "기록"
 permalink: /about/
 layout: single
 ---
 
-GitHub 블로그
+# 하루하루의 기록들
 
-이 블로그는 Github Pages 블로그 서비스인 github.io를 같이 만들어보는 블로그입니다.
-
-꾸미는 중~!
+멀리서 보면 희극이야

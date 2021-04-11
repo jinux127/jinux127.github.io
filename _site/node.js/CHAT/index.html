@@ -1,0 +1,927 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>실시간 채팅 서비스 - JJinux’s BLOG</title>
+<meta name="description" content="Node.js를 이용한 실시간 채팅 서비스">
+
+
+  <meta name="author" content="JINWOO">
+  
+  <meta property="article:author" content="JINWOO">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="JJinux's BLOG">
+<meta property="og:title" content="실시간 채팅 서비스">
+<meta property="og:url" content="https://jinux127.github.io/node.js/CHAT/">
+
+
+  <meta property="og:description" content="Node.js를 이용한 실시간 채팅 서비스">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-10T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2021-04-11T19:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://jinux127.github.io/node.js/CHAT/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "JINWOO",
+      "url": "https://jinux127.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="JJinux's BLOG Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          JJinux's BLOG
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/mind.jpg" alt="JINWOO" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">JINWOO</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>화이팅</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">대한민국</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="실시간 채팅 서비스">
+    <meta itemprop="description" content="Node.js를 이용한 실시간 채팅 서비스">
+    <meta itemprop="datePublished" content="2021-04-10T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2021-04-11T19:00:00+00:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">실시간 채팅 서비스
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#appjs">app.js</a></li><li><a href="#indexjs">index.js</a></li><li><a href="#indexhtml">index.html</a></li><li><a href="#indexcss">index.css</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>채팅 서비스를 만들어 보고 싶어져서 구글에 가장 먼저 나오는 블로그를 참조해 구현해봤다.</p>
+
+<ul>
+  <li>참조한 블로그: https://geundung.dev/58?category=719250</li>
+</ul>
+
+<p>Node.js를 사용하는 데 처음 사용해봐서 많이 버벅거렸지만 재미있는 경험이었다.</p>
+
+<h1 id="appjs">app.js</h1>
+
+<blockquote>
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Node.js 기본 내장 모듈 불러오기</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="c1">//express 모듈 불러오기</span>
+<span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="c1">//Node.js 기본 내장 모듈 불러오기</span>
+<span class="kd">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="c1">// socket.io 모듈 불러오기</span>
+<span class="kd">const</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">socket.io</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="c1">//express 객체 생성</span>
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+
+<span class="c1">// express http 서버 생성</span>
+<span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+
+<span class="c1">// 생성된 서버를 socket.io에 바인딩</span>
+<span class="kd">const</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>require 은 모듈을 가져오는데 다른 js 파일에 있는 모듈을 복사해 exports한다.</p>
+
+  <ul>
+    <li>참조 : https://medium.com/@chullino/require-exports-module-exports-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%A1%9C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-1d024ec5aca3</li>
+  </ul>
+
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="dl">'</span><span class="s1">/css</span><span class="dl">'</span><span class="p">,</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="dl">'</span><span class="s1">./static/css</span><span class="dl">'</span><span class="p">))</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="dl">'</span><span class="s1">/js</span><span class="dl">'</span><span class="p">,</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="dl">'</span><span class="s1">./static/js</span><span class="dl">'</span><span class="p">))</span>
+</code></pre></div>  </div>
+
+  <p>css 파일과 js 파일과 같은 정적 파일을 제공해준다.</p>
+
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Get방식으로 / 경로에 접속하면 실행</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="dl">'</span><span class="s1">./static/index.html</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">data</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">에러</span><span class="dl">'</span><span class="p">)</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,{</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">text/html</span><span class="dl">'</span><span class="p">})</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">})</span>
+</code></pre></div>  </div>
+
+  <p>/ 경로로 들어올경우 실행 해준다.</p>
+
+  <p>response.writeHead 헤더 설정.</p>
+
+  <p>response.write 화면에 노출할 결과 값</p>
+
+  <p>response.end 데이터의 마지막을 선택적으로 보낼 수 있음</p>
+
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//io.socket.on &gt;&gt; io.on 수정</span>
+<span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">connection</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="cm">/* 새로운 유저가 접속했을 경우 다른 소켓에게도 알려줌 */</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">newUser</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> 님이 접속하였습니다.</span><span class="dl">'</span><span class="p">)</span>
+  
+      <span class="cm">/* 소켓에 이름 저장해두기 */</span>
+      <span class="nx">socket</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span>
+  
+      <span class="cm">/* 모든 소켓에게 전송 */</span>
+      <span class="nx">io</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">update</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">connect</span><span class="dl">'</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">SERVER</span><span class="dl">'</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">님이 접속하였습니다.</span><span class="dl">'</span><span class="p">})</span>
+    <span class="p">})</span>
+  
+    <span class="cm">/* 전송한 메시지 받기 */</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="cm">/* 받은 데이터에 누가 보냈는지 이름을 추가 */</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">name</span>
+      
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+
+      <span class="cm">/* 보낸 사람을 제외한 나머지 유저에게 메시지 전송 */</span>
+      <span class="nx">socket</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">update</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+    <span class="p">})</span>
+  
+    <span class="cm">/* 접속 종료 */</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">disconnect</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">님이 나가셨습니다.</span><span class="dl">'</span><span class="p">)</span>
+  
+      <span class="cm">/* 나가는 사람을 제외한 나머지 유저에게 메시지 전송 */</span>
+      <span class="nx">socket</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">update</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">disconnect</span><span class="dl">'</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">SERVER</span><span class="dl">'</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">님이 나가셨습니다.</span><span class="dl">'</span><span class="p">});</span>
+    <span class="p">})</span>
+  <span class="p">})</span>
+
+
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">서버 실행중...</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>  </div>
+
+  <p>io.on 부분은 짧게도 사용할 수 있어서 수정했다.</p>
+
+  <blockquote>
+    <ul>
+      <li>참고</li>
+    </ul>
+
+    <p>Previously:</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventname</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">eventdata</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div>    </div>
+
+    <p>Now:</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">io</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventname</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">eventdata</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div>    </div>
+
+    <p>https://socket.io/docs/v2/migrating-from-0-9/index.html</p>
+  </blockquote>
+</blockquote>
+
+<h1 id="indexjs">index.js</h1>
+
+<blockquote>
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">()</span>
+
+<span class="cm">/* 접속 되었을 때 실행 */</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">connect</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+ <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="dl">'</span><span class="s1">반갑습니다!</span><span class="dl">'</span><span class="p">,</span><span class="dl">''</span><span class="p">)</span>
+ 
+ <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">){</span>
+     <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">익명</span><span class="dl">'</span>
+ <span class="p">}</span>
+
+ <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">newUser</span><span class="dl">'</span> <span class="p">,</span><span class="nx">name</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>  </div>
+
+  <p>connect 되면 실행된다</p>
+
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">update</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+
+ <span class="kd">var</span> <span class="nx">chat</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">chat</span><span class="dl">'</span><span class="p">)</span>
+
+ <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">)</span>
+ <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">: </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+ <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="dl">''</span>
+
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span>
+ 
+ <span class="c1">// 타입에 따라 적용할 클래스를 다르게 지정</span>
+ <span class="k">switch</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">case</span> <span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">:</span>
+     <span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">other</span><span class="dl">'</span>
+     <span class="k">break</span>
+
+   <span class="k">case</span> <span class="dl">'</span><span class="s1">connect</span><span class="dl">'</span><span class="p">:</span>
+     <span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">connect</span><span class="dl">'</span>
+     <span class="k">break</span>
+
+   <span class="k">case</span> <span class="dl">'</span><span class="s1">disconnect</span><span class="dl">'</span><span class="p">:</span>
+     <span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">disconnect</span><span class="dl">'</span>
+     <span class="k">break</span>
+ <span class="p">}</span>
+
+ <span class="nx">message</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">className</span><span class="p">)</span>
+ <span class="nx">message</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span>
+ <span class="nx">chat</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+<span class="p">})</span>
+
+</code></pre></div>  </div>
+
+  <p>update일 경우 실행, 메시지의 타입을 구별해 메시지의 종류에 따라 css를 다르게 적용해준다.</p>
+
+  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* 전송 함수 */</span>
+<span class="kd">function</span> <span class="nx">send</span><span class="p">()</span> <span class="p">{</span>
+ <span class="c1">// 입력되어있는 데이터 가져오기</span>
+ <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">msg</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span>
+ 
+ <span class="c1">// 가져왔으니 데이터 빈칸으로 변경</span>
+ <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">msg</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">''</span>
+
+ <span class="kd">var</span> <span class="nx">chat</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">chat</span><span class="dl">'</span><span class="p">)</span>
+ <span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">)</span>
+ <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+ <span class="nx">msg</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">me</span><span class="dl">'</span><span class="p">)</span>
+ <span class="nx">msg</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span>
+ <span class="nx">chat</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+
+ <span class="c1">// 서버로 send 이벤트 전달 + 데이터와 함께</span>
+ <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="nx">message</span><span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">enterkey</span><span class="p">()</span> <span class="p">{</span>
+ <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">==</span> <span class="mi">13</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="c1">// 엔터키가 눌렸을 때 실행할 내용</span>
+      <span class="nx">send</span><span class="p">();</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+
+  <p>javascript 문법의 appendChild, classList.add 등을 사용해서 html속성 추가를 해줘 메시지를 표현해준다.</p>
+
+  <p>엔터키를 누를 경우 바로 입력되는 함수도 만들어주었다.  위의 경우엔 엔터키를 누를 경우 send()를 실행해준다.</p>
+</blockquote>
+
+<h1 id="indexhtml">index.html</h1>
+
+<blockquote>
+  <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>채팅<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/css/index.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/socket.io/socket.io.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/js/index.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"chat"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- 채팅 메시지 영역 --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"msg"</span> <span class="na">onkeyup=</span><span class="s">"enterkey()"</span> <span class="na">placeholder=</span><span class="s">"메시지를 입력해주세요.."</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"send()"</span><span class="nt">&gt;</span>전송<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div>  </div>
+
+  <p>text의 onkeyup의 설정에 만들어 주었던 enterkey함수를 적용해줬다.</p>
+</blockquote>
+
+<h1 id="indexcss">index.css</h1>
+
+<blockquote>
+  <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* 메인 */</span>
+<span class="nf">#main</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">lightblue</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">700px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 채팅 영역 */</span>
+<span class="nf">#chat</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">overflow-y</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 접속 알림 */</span>
+<span class="nc">.connect</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">aquamarine</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 접속 종료 알림 */</span>
+<span class="nc">.disconnect</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">indianred</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 내가 보낸 메시지 */</span>
+<span class="nc">.me</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">lemonchiffon</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 상대방이 보낸 메시지 */</span>
+<span class="nc">.other</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div>  </div>
+
+  <p>그외 css 파일이다</p>
+
+  <blockquote>
+    <p>.</p>
+
+    <p>클래스 지정</p>
+  </blockquote>
+
+  <blockquote>
+    <p>#</p>
+
+    <p>아이디 지정</p>
+  </blockquote>
+</blockquote>
+
+<p>빠르게 만들어보려고 했지만 자바스크립트의 경우 제대로 공부를 해보지않아 버벅거린 면이 많아 공부할 필요성을 느끼게 해줬다.</p>
+
+<p>특히</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">: </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이 부분에서 에러가 뜨는데 `` 이 기호와 ‘’ 이 기호의 차이점을 잘 몰라서 헤매었다.</p>
+
+<blockquote>
+  <p>`` 의 사용법</p>
+
+  <ul>
+    <li>참고 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>전체 코드 : https://github.com/jinux127/CHAT.git</p>
+</blockquote>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#node-js" class="page__taxonomy-item" rel="tag">Node.js</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B1%84%ED%8C%85-%EC%84%9C%EB%B9%84%EC%8A%A4" class="page__taxonomy-item" rel="tag">실시간 채팅 서비스</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#node-js" class="page__taxonomy-item" rel="tag">Node.js</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-10">April 10, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%8B%A4%EC%8B%9C%EA%B0%84+%EC%B1%84%ED%8C%85+%EC%84%9C%EB%B9%84%EC%8A%A4%20https%3A%2F%2Fjinux127.github.io%2Fnode.js%2FCHAT%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjinux127.github.io%2Fnode.js%2FCHAT%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjinux127.github.io%2Fnode.js%2FCHAT%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/" class="pagination--pager" title="낮은 곳으로 - 이정하
+">Previous</a>
+    
+    
+      <a href="/javascript/JavaScript-Basic1/" class="pagination--pager" title="자바스크립트 기초 문법
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/javascript/JavaScript-Basic1/" rel="permalink">자바스크립트 기초 문법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">JavaScript
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%EC%9D%B4%EC%A0%95%ED%95%98/poem1/" rel="permalink">낮은 곳으로 - 이정하
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이정하 시인의 작품
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/first-post/" rel="permalink">github.io 첫 블로그
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">GitHub blog 서비스 이용해서 기록해보자
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 JINWOO. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
